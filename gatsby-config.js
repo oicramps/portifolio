@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: 'https://www.oicramps.dev',
     title: "Personal website",
   },
   plugins: [
