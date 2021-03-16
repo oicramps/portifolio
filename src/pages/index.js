@@ -6,7 +6,7 @@ import Layout from '../containers/Layout';
 const IndexPage = () => (
   <Layout>
     <Seo />
-    <div>oie</div>
+    <div>Under development</div>
   </Layout>
 );
 
