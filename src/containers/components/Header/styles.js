@@ -39,4 +39,7 @@ export const Avatar = styled.div`
   flex-direction: row-reverse;
 `;
 
-export const Description = styled.p``;
+export const Description = styled.p`
+  text-align: justify;
+  max-width: 400px;
+`;
