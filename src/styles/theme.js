@@ -8,4 +8,11 @@ export default {
     bg: '#343a40',
     gray: '#d5d5d5',
   },
+  spacings: {
+    xs: '4px',
+    sm: '8px',
+    md: '124px',
+    lg: '16px',
+    xl: '24px',
+  },
 };

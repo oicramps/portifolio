@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../containers/components/Header';
 import Seo from '../containers/components/Seo';
 import Layout from '../containers/Layout';
 
@@ -6,7 +7,10 @@ import Layout from '../containers/Layout';
 const IndexPage = () => (
   <Layout>
     <Seo />
-    <div>Under development</div>
+    <span>navbar</span>
+    <Header />
+    <main>content</main>
+    <footer>footer</footer>
   </Layout>
 );
 
