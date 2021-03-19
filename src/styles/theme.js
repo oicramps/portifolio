@@ -5,7 +5,7 @@ export default {
     primaryDark: '#7510F7',
     dark: '#262626',
     light: '#f5f5f5',
-    bg: '#343a40',
+    bg: '#242729',
     gray: '#d5d5d5',
   },
   spacings: {

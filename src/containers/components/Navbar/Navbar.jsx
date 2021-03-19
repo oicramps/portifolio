@@ -1,12 +1,14 @@
 import React from 'react';
+import { FaDownload } from 'react-icons/fa';
+import Button from '../Button';
 import Styled from './styles';
 
 const Navbar = () => (
   <Styled.Navbar>
-    <div>logo</div>
+    <div>LOGO</div>
     <Styled.Menu>
-      <div>menu</div>
-      <div>Download CV</div>
+      {/* <div>menu</div> */}
+      <Button icon={<FaDownload />}>Download CV</Button>
     </Styled.Menu>
   </Styled.Navbar>
 );
