@@ -1,11 +1,12 @@
 import React from 'react';
 import { FaDownload } from 'react-icons/fa';
 import Button from '../Button';
+import Logo from '../Logo';
 import Styled from './styles';
 
 const Navbar = () => (
   <Styled.Navbar>
-    <div>LOGO</div>
+    <Logo />
     <Styled.Menu>
       {/* <div>menu</div> */}
       <Button icon={<FaDownload />}>Download CV</Button>
