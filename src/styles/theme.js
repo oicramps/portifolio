@@ -2,7 +2,7 @@ export default {
   palette: {
     primaryLight: '#b9a3e3',
     primary: '#6441a5',
-    primaryDark: '#52057b',
+    primaryDark: '#7510F7',
     dark: '#262626',
     light: '#f5f5f5',
     bg: '#343a40',
@@ -11,7 +11,7 @@ export default {
   spacings: {
     xs: '4px',
     sm: '8px',
-    md: '124px',
+    md: '12px',
     lg: '16px',
     xl: '24px',
   },

@@ -1,5 +1,7 @@
 import React from 'react';
+import Footer from '../containers/components/Footer';
 import Header from '../containers/components/Header';
+import Navbar from '../containers/components/Navbar';
 import Seo from '../containers/components/Seo';
 import Layout from '../containers/Layout';
 
@@ -7,10 +9,10 @@ import Layout from '../containers/Layout';
 const IndexPage = () => (
   <Layout>
     <Seo />
-    <span>navbar</span>
+    <Navbar />
     <Header />
     <main>content</main>
-    <footer>footer</footer>
+    <Footer />
   </Layout>
 );
 

@@ -13,7 +13,6 @@ export const Container = styled.div`
 
 export const DescriptionContainer = styled.div`
   display: flex;
-  flex: 0 0 50%;
   flex-direction: column;
   margin-left: ${({ theme }) => theme.spacings.xl};
 
@@ -35,7 +34,6 @@ export const Title = styled.h1`
 
 export const Avatar = styled.div`
   display: flex;
-  flex: 0 0 50%;
   flex-direction: row-reverse;
 `;
 

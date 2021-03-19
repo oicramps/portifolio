@@ -4,6 +4,11 @@ module.exports = {
     title: 'Márcio Santos - Frontend Developer',
     description: "Hello! I'm Márcio Santos, the Frontend developer you're looking for",
     author: '@oicramps',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/oicramps/',
+      github: 'https://github.com/oicramps',
+      twitter: 'https://twitter.com/oicramps',
+    },
   },
   plugins: [
     'gatsby-plugin-styled-components',
