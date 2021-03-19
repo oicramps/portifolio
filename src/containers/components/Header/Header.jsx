@@ -1,9 +1,12 @@
 import React from 'react';
-import { Avatar, Container, Description, DescriptionContainer, SubTitle, Title } from './styles';
+import Avatar from '../Avatar';
+import { AvatarContainer, Container, Description, DescriptionContainer, SubTitle, Title } from './styles';
 
 const Header = () => (
   <Container>
-    <Avatar>avatar</Avatar>
+    <AvatarContainer>
+      <Avatar />
+    </AvatarContainer>
     <DescriptionContainer>
       <SubTitle>Hi, I&apos;m</SubTitle>
       <Title>Márcio Santos</Title>
