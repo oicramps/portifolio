@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import theme from '../../styles/theme';
 import GlobalStyle from '../../styles/GlobalStyle';
+import Styled from './styles';
 
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
@@ -15,7 +16,7 @@ const Layout = ({ children }) => (
         rel="stylesheet"
       />
     </Helmet>
-    {children}
+    <Styled.Container>{children}</Styled.Container>
   </ThemeProvider>
 );
 

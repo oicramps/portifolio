@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: ${({ theme }) => theme.spacings.xxl};
 
   @media screen and (max-width: 600px) {
     flex-direction: column;
