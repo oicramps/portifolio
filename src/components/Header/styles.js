@@ -40,5 +40,5 @@ export const AvatarContainer = styled.div`
 
 export const Description = styled.p`
   text-align: justify;
-  max-width: 400px;
+  max-width: 600px;
 `;
