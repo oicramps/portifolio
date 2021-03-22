@@ -17,6 +17,7 @@ Styled.Button = styled.a.attrs({ role: 'button' })`
   display: flex;
   align-items: center;
   box-shadow: 0 10px 10px -8px rgb(0 0 0 / 40%);
+  text-decoration: none;
 
   &:hover {
     background-color: ${({ theme }) => theme.palette.primary};
