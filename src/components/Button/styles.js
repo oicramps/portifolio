@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Styled = {};
 
-Styled.Button = styled.button`
+Styled.Button = styled.a.attrs({ role: 'button' })`
   cursor: pointer;
   border: 2px solid ${({ theme, color }) => theme.palette[color]};
   color: ${({ theme }) => theme.palette.light};
