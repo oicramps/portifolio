@@ -3,7 +3,7 @@ import { FaDownload } from 'react-icons/fa';
 import Button from '../Button';
 import Logo from '../Logo';
 import Styled from './styles';
-import cv from '../../files/marcio-santos-cv.pdf';
+import cv from '../../files/marcio-santos-resume.pdf';
 
 const Navbar = () => (
   <Styled.Navbar>

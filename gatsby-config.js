@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.oicramps.dev',
@@ -31,6 +35,15 @@ module.exports = {
         path: './src/images/',
       },
       __key: 'images',
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [process.env.GATSBY_GA_MEASUREMENT_ID],
+      },
+      pluginConfig: {
+        head: true,
+      },
     },
   ],
 };
