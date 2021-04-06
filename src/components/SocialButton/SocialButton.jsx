@@ -40,6 +40,7 @@ const SocialButton = ({ name }) => {
 
   const handleOpenLink = () => {
     window.open(social[name].url, '_blank');
+    if (window.gtag) window.gtag('event', 'social_media', { name });
   };
 
   return <Styled.Button onClick={handleOpenLink}>{social[name].icon}</Styled.Button>;
