@@ -2,8 +2,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { FaTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-
 import PropTypes from 'prop-types';
+import useAnalyticsEvents from '../../hooks/useAnalyticsEvents';
 import Styled from './styles';
 
 const SocialButton = ({ name }) => {
@@ -23,6 +23,7 @@ const SocialButton = ({ name }) => {
       }
     `
   );
+  const sendEvent = useAnalyticsEvents();
 
   const { linkedin, twitter, github, mail } = site.siteMetadata.social;
 
@@ -46,8 +47,8 @@ const SocialButton = ({ name }) => {
   };
 
   const handleOpenLink = () => {
+    sendEvent('social_media', { name });
     window.open(social[name].url, '_blank');
-    if (window.gtag) window.gtag('event', 'social_media', { name });
   };
 
   return <Styled.Button onClick={handleOpenLink}>{social[name].icon}</Styled.Button>;

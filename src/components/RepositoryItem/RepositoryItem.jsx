@@ -4,24 +4,40 @@ import { FaGithub, FaGlobeAmericas } from 'react-icons/fa';
 import format from 'date-fns/format';
 import Styled from './styles';
 import Button from '../Button';
+import useAnalyticsEvents from '../../hooks/useAnalyticsEvents';
 
-const RepositoryItem = ({ repository }) => (
-  <Styled.Card>
-    <Styled.Name>{repository.name}</Styled.Name>
-    <Styled.Desc>{repository.description}</Styled.Desc>
-    <Styled.Footer>
-      <Button icon={<FaGithub />} href={repository.url} target="_blank">
-        Github
-      </Button>
-      {repository.homepageUrl ? (
-        <Button margin={{ mt: 'xl' }} icon={<FaGlobeAmericas />} href={repository.homepageUrl} target="_blank">
-          Webpage
+const RepositoryItem = ({ repository }) => {
+  const { name, description, url, homepageUrl, updatedAt } = repository;
+
+  const sendEvent = useAnalyticsEvents();
+
+  const handleOpenLink = (link, type) => {
+    sendEvent(`repository_${type}_link`, { name, url });
+    window.open(link, '_blank');
+  };
+
+  return (
+    <Styled.Card>
+      <Styled.Name>{name}</Styled.Name>
+      <Styled.Desc>{description}</Styled.Desc>
+      <Styled.Footer>
+        <Button icon={<FaGithub />} onClick={() => handleOpenLink(url, 'github')}>
+          Github
         </Button>
-      ) : null}
-      <Styled.UpdatedAt>{format(new Date(repository.updatedAt), 'MM/dd/yyyy hh:mm:ss')}</Styled.UpdatedAt>
-    </Styled.Footer>
-  </Styled.Card>
-);
+        {homepageUrl ? (
+          <Button
+            margin={{ mt: 'xl' }}
+            icon={<FaGlobeAmericas />}
+            onClick={() => handleOpenLink(homepageUrl, 'webpage')}
+          >
+            Webpage
+          </Button>
+        ) : null}
+        <Styled.UpdatedAt>{format(new Date(updatedAt), 'MM/dd/yyyy hh:mm:ss')}</Styled.UpdatedAt>
+      </Styled.Footer>
+    </Styled.Card>
+  );
+};
 
 RepositoryItem.propTypes = {
   repository: PropTypes.shape({

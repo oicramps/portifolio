@@ -21,18 +21,18 @@ const Repositories = () => {
         },
       } = await octokit.graphql(
         `query ($login: String!) {
-        user(login: $login) {
-          repositories(orderBy: {field: PUSHED_AT, direction: DESC}, last: 10, privacy: PUBLIC, ownerAffiliations: OWNER) {
-            nodes {
-              description
-              homepageUrl
-              id
-              name
-              url
-              updatedAt
+          user(login: $login) {
+            repositories(orderBy: {field: PUSHED_AT, direction: DESC}, last: 10, privacy: PUBLIC, ownerAffiliations: OWNER) {
+              nodes {
+                description
+                homepageUrl
+                id
+                name
+                url
+                updatedAt
+              }
             }
           }
-        }
       }`,
         { login: 'oicramps' }
       );
