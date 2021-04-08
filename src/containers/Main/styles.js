@@ -1,10 +1,16 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Styled = {};
 
 Styled.Main = styled.main`
-  margin: ${({ theme }) => theme.spacings.xl};
-  flex: 1 0 auto;
+  ${({ theme }) => css`
+    margin: ${theme.spacings.xl} 200px;
+    flex: 1 0 auto;
+
+    @media screen and (max-width: ${theme.screens.xl}) {
+      margin: ${theme.spacings.xl};
+    } ;
+  `}
 `;
 
 Styled.UnderDevelopment = styled.div`

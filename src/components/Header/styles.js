@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   margin-bottom: ${({ theme }) => theme.spacings.xxl};
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: ${({ theme }) => console.log(theme.screens.sm) || theme.screens.sm}) {
     flex-direction: column;
     align-items: center;
   }
@@ -32,7 +32,7 @@ export const AvatarContainer = styled.div`
   display: flex;
   flex-direction: row-reverse;
   margin-right: ${({ theme }) => theme.spacings.xxl};
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: ${({ theme }) => theme.screens.sm}) {
     margin-right: 0;
     margin-bottom: ${({ theme }) => theme.spacings.xxl};
   }

@@ -1,16 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import Header from '../../components/Header';
+import Repositories from '../Repositories';
 import Styled from './styles';
 
-const Main = ({ children }) => (
+const Main = () => (
   <Styled.Main>
-    {children}
-    <Styled.UnderDevelopment>Under development</Styled.UnderDevelopment>
+    <Header />
+    <Repositories />
   </Styled.Main>
 );
-
-Main.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default Main;

@@ -8,6 +8,7 @@ const Footer = () => (
       <SocialButton name="linkedin" />
       <SocialButton name="github" />
       <SocialButton name="twitter" />
+      <SocialButton name="mail" />
     </Styled.SocialIcons>
     <div>@2021 Márcio Santos</div>
   </Styled.Footer>

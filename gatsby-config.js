@@ -12,6 +12,7 @@ module.exports = {
       linkedin: 'https://www.linkedin.com/in/oicramps/',
       github: 'https://github.com/oicramps',
       twitter: 'https://twitter.com/oicramps',
+      mail: 'mailto:marcio.tbms@gmail.com',
     },
   },
   plugins: [
