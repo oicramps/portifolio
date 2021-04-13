@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.oicramps.dev',
     title: 'Márcio Santos - Frontend Developer',
-    description: "Hello! I'm Márcio Santos, the Frontend developer you're looking for",
+    description: "Hello! I'm Márcio Santos, the Frontend Developer you're looking for",
     author: '@oicramps',
     social: {
       linkedin: 'https://www.linkedin.com/in/oicramps/',

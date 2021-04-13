@@ -45,6 +45,10 @@ const Seo = () => {
           property: `og:type`,
           content: `website`,
         },
+        {
+          property: `og:image`,
+          content: `https://oicramps-portifolio.s3-sa-east-1.amazonaws.com/icon.png`,
+        },
       ]}
     />
   );
