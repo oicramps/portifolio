@@ -8,14 +8,19 @@ Styled.Card = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    border: 1px solid ${theme.palette.primary};
+    border: 2px solid ${theme.palette.primary};
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
     padding: ${theme.spacings.lg};
-    margin-bottom: ${theme.spacings.xl};
-    width: 100%;
+    margin-bottom: ${theme.spacings.lg};
+    flex: 0 1 100%;
 
     @media screen and (min-width: ${theme.screens.lg}) {
-      width: unset;
-      width: 300px;
+      flex: 0 1 calc(47% - 1em);
+    }
+
+    @media screen and (min-width: ${theme.screens.xxl}) {
+      flex: 0 1 calc(30% - 1em);
     }
   `}
 `;

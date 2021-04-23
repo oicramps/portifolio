@@ -4,7 +4,6 @@ const Styled = {};
 
 Styled.Container = styled.div`
   display: flex;
-  align-items: center;
   flex-direction: column;
   padding: ${({ theme }) => theme.spacings.xl};
 `;
@@ -12,13 +11,8 @@ Styled.Container = styled.div`
 Styled.Items = styled.div`
   ${({ theme }) => css`
     display: flex;
-    width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
-
-    @media screen and (min-width: ${theme.screens.xxl}) {
-      justify-content: space-between;
-    }
   `}
 `;
 
