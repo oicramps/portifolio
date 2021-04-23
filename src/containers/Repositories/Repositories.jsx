@@ -52,8 +52,10 @@ const Repositories = () => {
   return (
     <Styled.Container>
       <Title>Repositories</Title>
-      <Spinner isLoading={isLoading} />
-      <Styled.Items>{repositories.map(mapRepositoryItem)}</Styled.Items>
+      <Styled.Content>
+        <Spinner isLoading={isLoading} />
+        <Styled.Items>{repositories.map(mapRepositoryItem)}</Styled.Items>
+      </Styled.Content>
     </Styled.Container>
   );
 };

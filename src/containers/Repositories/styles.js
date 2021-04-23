@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const Styled = {};
 
@@ -8,12 +8,15 @@ Styled.Container = styled.div`
   padding: ${({ theme }) => theme.spacings.xl};
 `;
 
+Styled.Content = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 Styled.Items = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  `}
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 `;
 
 export default Styled;
